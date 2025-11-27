@@ -1,0 +1,6 @@
+__pycashe__/
+*.pyc
+venv2/
+staticfiles/
+.idea/
+task_manager.egg-info/

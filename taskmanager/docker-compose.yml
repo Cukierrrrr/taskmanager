@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:17.0
+    environment:
+      - POSTGRES_DB=tasks
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=haslo123
+    ports:
+      - "5432:5432"
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    command: gunicorn  taskmanager.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - .:/app/
+    env_file:
+      - .env
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgres://admin:haslo123@db/tasks
+      - DB_HOST=db
