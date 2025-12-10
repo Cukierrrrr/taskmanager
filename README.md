@@ -19,11 +19,7 @@ Zbuduj komponenty Dockera, na których działa aplikacja
     
     docker-compose up --build -d
 
-### 3. Utwórz i wprowadź migracje
-
-Wykonaj poniższe polecenie aby utworzyć migracje
-
-    docker-compose exec web python manage.py makemigrations
+### 3. Wprowadź migracje
 
 Aby wprowadzić migracje dla bazy danych wykonaj polecenie
 
@@ -43,13 +39,20 @@ Aby mieć dostęp do aplikacji stwórz administratora poleceniem
 
     docker-compose exec web python manage.py createsuperuser
 
-### 3. Wejdź do aplikacji
+### 3. Uruchom aplikacje
+
+Aby uruchomić aplikację wywołaj polecenie
+
+    docker-compose exec web python manage.py runserver
+
+
+### 4. Wejdź do aplikacji
 
 Kiedy kontenery już się odpalą aplikacja będzie dostępna pod adresem
 
 http://localhost:8000
 
-### 4. Zatrzymaj aplikację
+### 5. Zatrzymaj aplikację
 
 Aby zatrzymać aplikację wywołaj polecenie
 
