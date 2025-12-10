@@ -39,20 +39,13 @@ Aby mieć dostęp do aplikacji stwórz administratora poleceniem
 
     docker-compose exec web python manage.py createsuperuser
 
-### 3. Uruchom aplikacje
-
-Aby uruchomić aplikację wywołaj polecenie
-
-    docker-compose exec web python manage.py runserver
-
-
-### 4. Wejdź do aplikacji
+### 3. Wejdź do aplikacji
 
 Kiedy kontenery już się odpalą aplikacja będzie dostępna pod adresem
 
 http://localhost:8000
 
-### 5. Zatrzymaj aplikację
+### 4. Zatrzymaj aplikację
 
 Aby zatrzymać aplikację wywołaj polecenie
 
