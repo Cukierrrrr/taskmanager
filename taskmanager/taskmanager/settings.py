@@ -76,10 +76,10 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "tasks",
-        "USER": "admin",
-        "PASSWORD": "haslo123",
+        "USER": DB_USER,
+        "PASSWORD":  DB_PASSWORD,
         "HOST": DB_HOST,
-        "PORT": "5432",
+        "PORT": DB_PORT,
     }
 }
 
